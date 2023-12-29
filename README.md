@@ -3,3 +3,7 @@ This application can be used by creators to stream and view live sessions and sc
 Improvements:
 a)I tried using Amazon IVS which seems more reliable
 b) Using a separate media server like amazon ivs would facilitate usage of websockets from a service like api gateway which would enable high scalability and more concurrent connections
+
+The api and socket servers are currently deployed via Railway
+as it has a generous free tier:
+https://social-chat-api-production.up.railway.app
