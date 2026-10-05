@@ -1,12 +1,9 @@
-const { v4: uuidv4 } = require("uuid");
+﻿const { v4: uuidv4 } = require("uuid");
 const redis = require('redis');
 
+require('dotenv').config();
 const redisClient = redis.createClient({
-  password: '4QHvXO112r3EtvaeuO7ei6fx7DjKMlsN',
-  socket: {
-      host: 'redis-17567.c325.us-east-1-4.ec2.cloud.redislabs.com',
-      port: 17567
-  }
+  url: process.env.REDIS_URL,
 });
 
 
@@ -407,3 +404,4 @@ module.exports = {
   joinActiveRoom,
   leaveActiveRoom,
 };
+
